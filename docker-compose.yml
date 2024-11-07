@@ -14,16 +14,6 @@ services:
       networks:
         - myappnetwork
 
-  prometheus:
-    image: prom/prometheus:latest
-    container_name: prometheus
-    volumes:
-      - ./prometheus.yml:/etc/prometheus/prometheus.yml
-    ports:
-      - "5100:9090"
-    environment:
-      - TZ=UTC
-
 networks:
   myappnetwork:
     name: myappnetwork
